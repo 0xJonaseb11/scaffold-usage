@@ -40,9 +40,17 @@ const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvir
     autoMine: true,
   });
 
+  await deploy("MyToken", {
+    from: deployer,
+    args: [deployer],
+    log: true,
+    autoMine: true,
+  });
+
   // Get the deployed contract to interact with it after deploying.
   const mineralRegistry = await hre.ethers.getContract<Contract>("MineralRegistry", deployer);
   const rolesManager = await hre.ethers.getContract<Contract>("RolesManager", deployer);
+  const myToken = await hre.ethers.getContract<Contract>("MyToken", deployer);
 
   // console.log("Mineral Registry factory: ", await mineralRegistry.registerMineral("Gold", "Mining Center"));
   // console.log("RolesManager: ", await rolesManager.registerMineral(0xe7f1725e7734ce288f8367e1bb143e90bb3f0512, "MINER_ROLE"));
@@ -52,4 +60,4 @@ export default deployContracts;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployContracts.tags = ["MineralRegistry", "RolesManager"];
+deployContracts.tags = ["MineralRegistry", "RolesManager", "MyToken"];
