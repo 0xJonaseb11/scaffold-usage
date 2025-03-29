@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏗 Scaffold-ETH 2
 
 <h4 align="center">
@@ -82,5 +83,18 @@ Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob
 
 
 ---------------------
+=======
+# scaffold-usage
+
+## Getting started
+
+```sh
+#Initialize scaffold eth project
+npx create-eth@latest
+```
+### Installation requirements
+
+----------------------------
+>>>>>>> a9f0d18fe0352efcbad2298afc3ca4ec39fe661c
 
 @0xJonaseb11

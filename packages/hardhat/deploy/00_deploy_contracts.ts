@@ -44,8 +44,8 @@ const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvir
   const mineralRegistry = await hre.ethers.getContract<Contract>("MineralRegistry", deployer);
   const rolesManager = await hre.ethers.getContract<Contract>("RolesManager", deployer);
 
-  console.log("Mineral Registry factory: ", await mineralRegistry.registerMineral("Gold", "Mining Center"));
-  console.log("RolesManager: ", await rolesManager.registerMineral(0xe7f1725e7734ce288f8367e1bb143e90bb3f0512, "MINER_ROLE"));
+  // console.log("Mineral Registry factory: ", await mineralRegistry.registerMineral("Gold", "Mining Center"));
+  // console.log("RolesManager: ", await rolesManager.registerMineral(0xe7f1725e7734ce288f8367e1bb143e90bb3f0512, "MINER_ROLE"));
 };
 
 export default deployContracts;
